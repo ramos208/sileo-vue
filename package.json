@@ -1,0 +1,48 @@
+{
+  "name": "vue-sileo-toast",
+  "version": "1.0.0",
+  "description": "A production-ready Vue 3 toast notification library inspired by Sileo.",
+  "type": "module",
+  "main": "./dist/sileo-vue.umd.cjs",
+  "module": "./dist/sileo-vue.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/sileo-vue.js",
+      "require": "./dist/sileo-vue.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css",
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vue": "^3.3.0",
+    "vue-tsc": "^3.2.6"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "toast",
+    "notification",
+    "sileo",
+    "glassmorphism",
+    "ui-library"
+  ],
+  "author": "",
+  "license": "MIT"
+}
