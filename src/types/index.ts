@@ -11,7 +11,9 @@ export interface ToastAction {
 export interface Toast {
   id: string;
   title?: string;
+  titleColor?: string;
   message: string;
+  messageColor?: string;
   type?: ToastType;
   duration?: number;
   position?: ToastPosition;

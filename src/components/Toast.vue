@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-        <span v-if="displayTitle" class="sileo-title-text" :class="`text-${toast.type || 'default'}`">{{ displayTitle }}</span>
+        <span v-if="displayTitle" class="sileo-title-text" :class="!toast.titleColor ? `text-${toast.type || 'default'}` : ''" :style="toast.titleColor ? `color: ${toast.titleColor} !important;` : ''">{{ displayTitle }}</span>
         <button v-if="toast.closeOnClick" class="sileo-close-btn" @click.stop="$emit('close')">
           <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
@@ -64,7 +64,7 @@
                 alignItems: toast.action?.position === 'bottom' ? 'flex-start' : 'center'
               }"
             >
-              <p v-if="displayMessage" class="sileo-message">{{ displayMessage }}</p>
+              <p v-if="displayMessage" class="sileo-message" :style="toast.messageColor ? `color: ${toast.messageColor} !important;` : ''">{{ displayMessage }}</p>
               <button 
                 v-if="toast.action" 
                 class="sileo-action-trigger" 
